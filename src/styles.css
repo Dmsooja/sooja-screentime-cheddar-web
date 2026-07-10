@@ -159,7 +159,8 @@ img {
 .hero__title {
   margin: 0;
   font: var(--cds-type-display-xlarge);
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.04em;
   color: var(--token-color-green-100);
 }
 
@@ -207,7 +208,7 @@ img {
   padding: calc(var(--cds-size-padding-xxl) * 2 + var(--cds-size-padding-m)) var(--cds-size-padding-xxl);
   display: flex;
   flex-direction: column;
-  gap: calc(var(--cds-size-padding-xxl) + var(--cds-size-padding-l));
+  gap: var(--cds-size-padding-xxl);
 }
 
 .updates__head {
@@ -222,13 +223,14 @@ img {
 .updates__title {
   margin: 0;
   font: var(--cds-type-display-xlarge);
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.04em;
   color: var(--token-color-brand-400);
 }
 
 .updates__arrows {
   display: flex;
-  gap: var(--cds-size-padding-xs);
+  gap: var(--cds-size-gap-s);
 }
 
 .arrow-button {
@@ -270,7 +272,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: var(--cds-size-gap-s);
-  padding: 13px;
+  padding: var(--cds-size-padding-s);
   border: var(--cds-size-border) solid var(--cds-color-foreground-tertiary);
   background: var(--cds-color-bg-on-brand);
   border-radius: var(--cds-size-corner-large);
