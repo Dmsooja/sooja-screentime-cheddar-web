@@ -8,12 +8,11 @@ Homepage web app built with React + Vite and themed with `@screentime/cheddar-ds
 
 - Node.js 20+ (or current LTS)
 - npm 10+
-- GitHub SSH access to `figma/screentime-cheddar-ds` (dependency is installed via `git+ssh`)
 
 ### Install dependencies
 
 ```bash
-npm install
+npm ci
 ```
 
 ### Run locally
@@ -46,3 +45,8 @@ npm run preview
 
 - Design system styles are imported in `src/main.tsx` via `@screentime/cheddar-ds/styles.css`.
 - If your port is already in use, Vite will automatically select the next available port.
+## Design system dependency
+
+The app uses the bundled `vendor/screentime-cheddar-ds-1.1.0.tgz` package. It contains the prebuilt design system, styles, and fonts from version 1.1.0 (source commit `764ba2a25310377bd1858e93804355b3625af181`). No private GitHub repository access or registry token is required to install it, including in Figma Code Layers.
+
+To update the design system, build and pack the desired version, add its archive to `vendor/`, update the dependency path and `.gitignore` exception, then run `npm install` and commit the updated lockfile.

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@screentime/cheddar-ds": "git+ssh://git@github.com/figma/screentime-cheddar-ds.git#semver:^1.0.1",
+    "@screentime/cheddar-ds": "file:vendor/screentime-cheddar-ds-1.1.0.tgz",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.18.1"
