@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Oswald:Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Oswald_wght__2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald:SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Oswald_wght__2') format('woff2');
+}
+
 *,
 *::before,
 *::after {
@@ -1086,6 +1102,7 @@ a {
 }
 
 .about-hero h1 {
+  font-family: 'Oswald:SemiBold', var(--cds-font-family-display);
   font-size: 120px;
   line-height: 0.95;
   letter-spacing: -4.8px;
@@ -1168,7 +1185,7 @@ a {
   position: relative;
   z-index: 1;
   color: var(--token-color-white-100);
-  font-family: var(--cds-font-family-display);
+  font-family: 'Oswald:Bold', var(--cds-font-family-display);
   font-size: 100px;
   line-height: 1;
 }
@@ -1239,6 +1256,7 @@ a {
 }
 
 .figma-mission h2 {
+  font-family: 'Oswald:SemiBold', var(--cds-font-family-display);
   font-size: 80px;
 }
 
@@ -1258,6 +1276,7 @@ a {
   left: 9%;
   width: 205px;
   transform: translateY(-50%) rotate(-4deg);
+  animation: mission-sparkle-left 2s infinite;
 }
 
 .figma-mission__sparkle--top {
@@ -1265,6 +1284,7 @@ a {
   right: 9.8%;
   width: 183px;
   transform: rotate(4deg);
+  animation: mission-sparkle-top 2s infinite;
 }
 
 .figma-mission__sparkle--small {
@@ -1296,6 +1316,7 @@ a {
   top: 40px;
   left: 40px;
   width: min(513px, calc(100% - 80px));
+  font-family: 'Oswald:SemiBold', var(--cds-font-family-display);
   font-size: 80px;
 }
 
@@ -1366,7 +1387,7 @@ a {
 .figma-timeline__node strong {
   position: relative;
   z-index: 1;
-  font-family: var(--cds-font-family-display);
+  font-family: 'Oswald:Bold', var(--cds-font-family-display);
   font-size: 32px;
 }
 
@@ -1410,7 +1431,54 @@ a {
 }
 
 .about-careers h2 {
+  font-family: 'Oswald:SemiBold', var(--cds-font-family-display);
   font-size: clamp(58px, 6vw, 84px);
+}
+
+@keyframes mission-sparkle-left {
+  0% {
+    transform: translate(0, -50%) rotate(-4deg) scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  12% {
+    transform: translate(-5px, calc(-50% + 7px)) rotate(5deg) scale(1.04, 0.96);
+    animation-timing-function: ease-out;
+  }
+  35% {
+    transform: translate(9px, calc(-50% - 23px)) rotate(-23deg) scale(1.08);
+    animation-timing-function: ease-in-out;
+  }
+  60% {
+    transform: translate(-4px, calc(-50% - 9px)) rotate(3deg) scale(0.98, 1.02);
+    animation-timing-function: ease-out;
+  }
+  92%,
+  100% {
+    transform: translate(0, -50%) rotate(-4deg) scale(1);
+  }
+}
+
+@keyframes mission-sparkle-top {
+  0%,
+  8% {
+    transform: translate(0) rotate(4deg) scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  20% {
+    transform: translate(5px, 7px) rotate(-5deg) scale(1.04, 0.96);
+    animation-timing-function: ease-out;
+  }
+  43% {
+    transform: translate(-9px, -23px) rotate(23deg) scale(1.08);
+    animation-timing-function: ease-in-out;
+  }
+  68% {
+    transform: translate(4px, -9px) rotate(-3deg) scale(0.98, 1.02);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate(0) rotate(4deg) scale(1);
+  }
 }
 
 .about-careers__copy p {
@@ -2296,6 +2364,8 @@ a {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
 }
